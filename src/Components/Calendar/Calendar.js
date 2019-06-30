@@ -31,7 +31,7 @@ export default class Calendar extends React.Component {
   renderHeader() {
     const dateFormat = "MMMM YYYY";
     return (
-      <div className="header row flex-middle">
+      <div>
         <div className="col col-start" />
         <div className="col col-center">
           <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
@@ -54,8 +54,6 @@ export default class Calendar extends React.Component {
     }
     return <div className="days row">{days}</div>;
   }
-
-  onDateClick = day => {};
 
   renderCells() {
     const StartDate = this.props.StartDate;
